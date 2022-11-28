@@ -7,12 +7,14 @@ import com.example.rickandmorty.data.remote.CharacterApi
 import kotlinx.coroutines.launch
 
 class MainViewModel: ViewModel(){
-    private val repository: Repository = Repository(CharacterApi)
-    var character = repository.character
 
-    fun  loadCharacter(amount: Int){
+    private val repository: Repository = Repository(CharacterApi)
+
+    val characterList = repository.character
+
+    fun loadCharacter(){
         viewModelScope.launch {
-            repository.getCharacter(amount)
+            repository.getCharacter()
         }
     }
 
