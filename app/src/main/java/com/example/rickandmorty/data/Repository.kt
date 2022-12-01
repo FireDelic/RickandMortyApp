@@ -10,6 +10,7 @@ import com.example.rickandmorty.data.remote.CharacterApi
 class Repository(private val api: CharacterApi) {
 
     private val _character = MutableLiveData<List<Character>>()
+
     val character: LiveData<List<Character>>
         get() = _character
 
@@ -19,6 +20,13 @@ class Repository(private val api: CharacterApi) {
             _character.value = result.charList
         } catch (e: Exception){
             Log.e(TAG, "Error loading Character from API: $e")
+        }
+    }
+    suspend fun saveCharacter(character: Character) {
+        try {
+            database.characterDatabaseDao.insert(character)
+        }catch (e: Exception) {
+        Log.e(TAG, "Error writing data in database: $e")
         }
     }
 }

@@ -1,9 +1,16 @@
 package com.example.rickandmorty.data.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import com.squareup.moshi.Json
+
+@Entity
 data class Character(
-    val id: Int,
-    val image: String,
-    val name:String,
-    val status: String,
-    val species: String
+
+    @PrimaryKey()
+    @Json val id: Int,
+    @Json val image: String,
+    @Json val name: String,
+    @Json val status: String,
+    @Json val species: String
 )

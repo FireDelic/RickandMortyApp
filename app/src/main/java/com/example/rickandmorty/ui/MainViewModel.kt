@@ -9,13 +9,22 @@ import kotlinx.coroutines.launch
 class MainViewModel: ViewModel(){
 
     private val repository: Repository = Repository(CharacterApi)
+    private val database: Repository = repository
 
     val characterList = repository.character
+    val favouritsList = repository
 
     fun loadCharacter(){
         viewModelScope.launch {
             repository.getCharacter()
         }
     }
+
+    fun saveCharacter(){
+        viewModelScope.launch {
+           favouritsList.contains(database)
+        }
+    }
+
 
 }

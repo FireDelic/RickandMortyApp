@@ -4,4 +4,6 @@
     <string name="btnEpisode">Episode</string>
     <string name="btnCharacter">Character</string>
     <string name="btnLocation">Location</string>
+    <string name="character">List of Characters</string>
+    <string name="favbtntext">Favorit</string>
 </resources>

@@ -11,11 +11,13 @@
         <action
             android:id="@+id/action_home_to_character"
             app:destination="@id/character" />
+        <action
+            android:id="@+id/action_home_to_favoritFragment"
+            app:destination="@id/favoritFragment" />
     </fragment>
     <fragment
         android:id="@+id/character"
-        android:name="com.example.rickandmorty.ui.CharacterFragment"
-        android:label="Character" >
+        android:name="com.example.rickandmorty.ui.CharacterFragment">
         <action
             android:id="@+id/action_character_to_characterDetail"
             app:destination="@id/characterDetail" />
@@ -34,4 +36,8 @@
             android:name="charID"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/favoritFragment"
+        android:name="com.example.rickandmorty.ui.FavoriteFragment"
+        android:label="FavoritFragment" />
 </navigation>

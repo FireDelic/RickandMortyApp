@@ -9,20 +9,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/tv_topbar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="#673AB7"
-            android:gravity="center"
-            android:text="Character"
-            android:textColor="#ECD1CF"
-            android:textSize="34sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:background="@color/teal_200">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/image_list"
@@ -30,12 +18,12 @@
             android:layout_height="0dp"
             android:clipToPadding="false"
             android:visibility="visible"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_topbar"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:spanCount="2"
             tools:itemCount="40"
