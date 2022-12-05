@@ -4,5 +4,5 @@ import com.squareup.moshi.Json
 
 data class CharacterList(
     @Json(name= "results")
-    val charList: List<Character>
+    val charList: List<com.example.rickandmorty.data.model.Character>
 )

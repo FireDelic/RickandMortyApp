@@ -21,7 +21,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:itemCount="40"
-            tools:listitem="@layout/list_item" />
+            tools:listitem="@layout/fav_item"
+            tools:ignore=""/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

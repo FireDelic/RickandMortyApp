@@ -6,4 +6,12 @@
     <string name="btnLocation">Location</string>
     <string name="character">List of Characters</string>
     <string name="favbtntext">Favorit</string>
+    <string name="tv_fav">#1</string>
+    <string name="iv_favImage">Image_of_Character</string>
+    <string name="charID">#1</string>
+    <string name="ib_tv_character">Character</string>
+    <string name="contentDescript">navigate_to_character</string>
+    <string name="ib_character">to_character</string>
+    <string name="navigate_to_favorite">navigate to Favorite</string>
+    <string name="ib_text_favorite">Favorite</string>
 </resources>

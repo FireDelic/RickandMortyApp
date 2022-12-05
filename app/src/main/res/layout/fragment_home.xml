@@ -12,19 +12,19 @@
         android:layout_height="match_parent"
         android:background="@drawable/nicebackgr">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/button_character"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/getschwifty"
-            android:text="@string/btnCharacter"
-            android:textSize="20sp"
+            android:contentDescription="@string/contentDescript"
+            android:elevation="@dimen/cardview_default_elevation"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toTopOf="@+id/button_location"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/warpswirl" />
 
         <Button
             android:id="@+id/button_episode"
@@ -35,16 +35,17 @@
             android:text="@string/btnEpisode"
             android:textSize="20sp"
             app:cornerRadius="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/btnFavorit"
+            app:layout_constraintBottom_toTopOf="@+id/ib_favorite"
             app:layout_constraintEnd_toEndOf="@+id/button_location"
             app:layout_constraintStart_toStartOf="@+id/button_location"
             app:layout_constraintTop_toBottomOf="@+id/button_location" />
 
-        <Button
-            android:id="@+id/btnFavorit"
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ib_favorite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="52dp"
+            android:contentDescription="@string/navigate_to_favorite"
             android:fontFamily="@font/getschwifty"
             android:text="@string/favbtntext"
             android:textSize="20sp"
@@ -53,7 +54,8 @@
             app:layout_constraintEnd_toEndOf="@+id/button_episode"
             app:layout_constraintHorizontal_bias="0.6"
             app:layout_constraintStart_toStartOf="@+id/button_episode"
-            app:layout_constraintTop_toBottomOf="@+id/button_episode" />
+            app:layout_constraintTop_toBottomOf="@+id/button_episode"
+            app:srcCompat="@drawable/warpswirl" />
 
         <Button
             android:id="@+id/button_location"
@@ -69,6 +71,36 @@
             app:layout_constraintHorizontal_bias="0.466"
             app:layout_constraintStart_toStartOf="@+id/button_character"
             app:layout_constraintTop_toBottomOf="@+id/button_character" />
+
+        <TextView
+            android:id="@+id/tv_ib_character"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/ib_character"
+            android:elevation="8dp"
+            android:fontFamily="@font/getschwifty"
+            android:text="@string/ib_tv_character"
+            android:textColor="@color/ram_violet"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/button_character"
+            app:layout_constraintEnd_toEndOf="@+id/button_character"
+            app:layout_constraintStart_toStartOf="@+id/button_character"
+            app:layout_constraintTop_toTopOf="@+id/button_character" />
+
+        <TextView
+            android:id="@+id/ib_tv_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/getschwifty"
+            android:text="@string/ib_text_favorite"
+            android:textColor="@color/ram_violet"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ib_favorite"
+            app:layout_constraintEnd_toEndOf="@+id/ib_favorite"
+            app:layout_constraintStart_toStartOf="@+id/ib_favorite"
+            app:layout_constraintTop_toTopOf="@+id/ib_favorite" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

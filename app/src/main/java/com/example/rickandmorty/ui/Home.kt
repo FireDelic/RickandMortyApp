@@ -28,7 +28,7 @@ class Home : Fragment() {
             findNavController().navigate(HomeDirections.actionHomeToCharacter())
         }
 
-        binding.btnFavorit.setOnClickListener {
+        binding.ibFavorite.setOnClickListener {
             findNavController().navigate(HomeDirections.actionHomeToFavoritFragment())
         }
     }

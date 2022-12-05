@@ -7,10 +7,10 @@ import com.squareup.moshi.Json
 @Entity
 data class Character(
 
-    @PrimaryKey()
+    @PrimaryKey
     @Json val id: Int,
     @Json val image: String,
     @Json val name: String,
     @Json val status: String,
-    @Json val species: String
-)
+    @Json val species: String,
+    )

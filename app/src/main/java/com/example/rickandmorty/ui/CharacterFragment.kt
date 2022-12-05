@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
 import com.example.rickandmorty.adapter.CharacterAdapter
 import com.example.rickandmorty.databinding.FragmentCharacterBinding
 
@@ -30,12 +29,8 @@ class CharacterFragment : Fragment() {
         viewModel.loadCharacter()
 
         val characterAdapter = CharacterAdapter()
-        binding.imageList.adapter = characterAdapter
 
-        viewModel.characterList.observe(viewLifecycleOwner,
-            Observer {
-                characterAdapter.submitList(it)
-            }
-        )
+        binding.imageList.adapter = characterAdapter
+        viewModel.characterList.value?.let { characterAdapter.submitList(it) }
     }
 }

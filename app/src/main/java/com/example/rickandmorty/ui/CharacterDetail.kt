@@ -40,6 +40,9 @@ class CharacterDetail : Fragment() {
             binding.charStatus.text = selectedChar.status
         }
         binding.btnSave.setOnClickListener {
+            if (selectedChar != null) {
+                viewModel.saveCharacter(selectedChar)
+            }
 
         }
     }

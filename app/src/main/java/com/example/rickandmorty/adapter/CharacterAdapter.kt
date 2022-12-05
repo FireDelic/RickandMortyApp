@@ -30,7 +30,7 @@ class CharacterAdapter(
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val imageView = view.findViewById<ImageView>(R.id.ivChar_image)
         val textView = view.findViewById<TextView>(R.id.tvChar_name)
-        val card = view.findViewById<MaterialCardView>(R.id.char_card)
+        val card = view.findViewById<MaterialCardView>(R.id.button_character)
     }
 
     // hier werden neue ViewHolder erstellt
