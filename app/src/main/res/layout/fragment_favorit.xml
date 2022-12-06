@@ -9,7 +9,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/nicebackgr">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/fav_list"
@@ -20,9 +21,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            tools:ignore=""
             tools:itemCount="40"
-            tools:listitem="@layout/fav_item"
-            tools:ignore=""/>
+            tools:listitem="@layout/fav_item" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

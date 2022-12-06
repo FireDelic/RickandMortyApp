@@ -12,5 +12,8 @@ interface CharacterDatabaseDao {
     @Query("SELECT * FROM Character ")
     fun getAll(): LiveData<List<com.example.rickandmorty.data.model.Character>>
 
+    @Query("DELETE FROM Character WHERE id = :id")
+    suspend fun deleteById(id: Int)
+
 
 }

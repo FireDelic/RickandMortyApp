@@ -5,21 +5,30 @@
     android:id="@+id/cv_listItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardBackgroundColor="@color/teal_700"
-    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@color/ram_bg_green"
+    app:cardCornerRadius="20dp"
     app:cardElevation="8dp"
     app:contentPadding="4dp"
     tools:ignore="MissingClass">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/iv_favChar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="false"
         android:contentDescription="@string/iv_favImage"
+        android:cropToPadding="false"
+        android:elevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -29,6 +38,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="68dp"
+        android:elevation="4dp"
         android:fontFamily="@font/getschwifty"
         android:text="@android:string/unknownName"
         android:textAllCaps="false"
@@ -38,16 +48,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toEndOf="@+id/iv_favChar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_charID" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_charID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:elevation="4dp"
         android:fontFamily="@font/adultswim"
-        android:text="@string/charID"
+        android:text="@string/NoOfCgar"
         android:textAlignment="center"
         android:textColor="@color/ram_violet"
         android:textSize="20sp"
