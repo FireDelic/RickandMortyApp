@@ -39,11 +39,17 @@ class CharacterDetail : Fragment() {
             binding.charSpecies.text = selectedChar.species
             binding.charStatus.text = selectedChar.status
         }
+
         binding.btnSave.setOnClickListener {
             if (selectedChar != null) {
                 viewModel.saveCharacter(selectedChar)
             }
+        }
 
+        binding.btnDelete.setOnClickListener{
+            if (selectedChar != null) {
+                viewModel.deleteFav(selectedChar.id)
+            }
         }
     }
 }

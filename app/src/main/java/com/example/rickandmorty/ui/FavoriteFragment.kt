@@ -8,13 +8,19 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.rickandmorty.R
+import com.example.rickandmorty.adapter.FavoriteAdapter
+import com.example.rickandmorty.databinding.FragmentCharacterdetailBinding
 import com.example.rickandmorty.databinding.FragmentFavoritBinding
 
 class FavoriteFragment : Fragment() {
 
+    //Für den Inflater
     private lateinit var binding: FragmentFavoritBinding
+    private lateinit var detailbinding: FragmentCharacterdetailBinding
     private val viewModel: MainViewModel by activityViewModels()
 
+
+    //Hier wird der Screen aufgeblasen!! ( quasi Inflated )
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -27,17 +33,22 @@ class FavoriteFragment : Fragment() {
             false
         )
         binding.lifecycleOwner = this.viewLifecycleOwner
-        /*
-        binding = FragmentFavoriteBinding.inflate(inflater)
-        binding.lifecycleOwner = this*/
         return binding.root
     }
 
+    //Screen wird inflated und mit dem Recycler bestückt bzw. verbunden
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-     //   val favoriteAdapter = CharacterAdapter()
-     //   binding.favList.adapter = favoriteAdapter
+        //Hier wird der Recycler meiner Favoriten angeschlossen
+        val favoriteAdapter = FavoriteAdapter()
+        binding.favList.adapter = favoriteAdapter
 
+        viewModel.favouritsList.observe(
+            viewLifecycleOwner
+        )
+        {
+            favoriteAdapter.submitList(it)
+        }
     }
 }

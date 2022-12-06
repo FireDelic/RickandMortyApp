@@ -5,7 +5,7 @@
     <string name="btnCharacter">Character</string>
     <string name="btnLocation">Location</string>
     <string name="character">List of Characters</string>
-    <string name="favbtntext">Favorit</string>
+    <string name="favbtntext">Favorites</string>
     <string name="tv_fav">#1</string>
     <string name="iv_favImage">Image_of_Character</string>
     <string name="charID">#1</string>
@@ -13,5 +13,7 @@
     <string name="contentDescript">navigate_to_character</string>
     <string name="ib_character">to_character</string>
     <string name="navigate_to_favorite">navigate to Favorite</string>
-    <string name="ib_text_favorite">Favorite</string>
+    <string name="ib_text_favorite">Favorites</string>
+    <string name="NoOfCgar">#</string>
+    <string name="construction">construction</string>
 </resources>

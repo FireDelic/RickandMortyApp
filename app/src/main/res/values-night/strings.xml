@@ -14,4 +14,6 @@
     <string name="ib_character">to_character</string>
     <string name="navigate_to_favorite">navigate to Favorite</string>
     <string name="ib_text_favorite">Favorite</string>
+    <string name="NoOfCgar">#</string>
+    <string name="construction">construction</string>
 </resources>
