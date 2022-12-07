@@ -9,14 +9,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.rickandmorty.R
 import com.example.rickandmorty.adapter.FavoriteAdapter
-import com.example.rickandmorty.databinding.FragmentCharacterdetailBinding
 import com.example.rickandmorty.databinding.FragmentFavoritBinding
 
 class FavoriteFragment : Fragment() {
 
     //Für den Inflater
     private lateinit var binding: FragmentFavoritBinding
-    private lateinit var detailbinding: FragmentCharacterdetailBinding
     private val viewModel: MainViewModel by activityViewModels()
 
 
@@ -50,5 +48,11 @@ class FavoriteFragment : Fragment() {
         {
             favoriteAdapter.submitList(it)
         }
+    /*
+        binding.favList.setOnClickListener {
+
+            findNavController().navigate(FavoriteFragmentDirections.actionFavoritFragmentToCharacterDetail(charID))
+        }
+*/
     }
 }
